@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
     }
 
     char *content = argv[2];
-    size_t len = strlen(content) + 1;
+    size_t len = strlen(content);
     size_t nwritten = fwrite(content, sizeof(char), len, f);
     if (nwritten != len) {
         printf("failed to write %s\n", content);
